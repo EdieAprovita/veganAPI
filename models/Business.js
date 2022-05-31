@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = required('mongoose');
 const { Schema } = mongoose;
-import Review from './Review.js';
+const Review = required('./Review.js');
 
 const businessSchema = new Schema(
 	{
@@ -84,4 +84,4 @@ const businessSchema = new Schema(
 );
 
 const Business = mongoose.model('Business', businessSchema);
-export default Business;
+module.exports = Business;

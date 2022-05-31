@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = required('mongoose');
 const { Schema } = mongoose;
-import Review from './Review.js';
+const Review = required('./Review.js');
 
 const doctorSchema = new Schema(
 	{
@@ -77,4 +77,4 @@ const doctorSchema = new Schema(
 );
 
 const Doctor = mongoose.model('Doctor', doctorSchema);
-export default Doctor;
+module.exports = Doctor;

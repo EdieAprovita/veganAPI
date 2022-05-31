@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = required('mongoose');
 const { Schema } = mongoose;
-import Review from './Review.js';
+const Review = required('./Review.js');
 
 const marketSchema = new Schema(
 	{
@@ -56,4 +56,4 @@ const marketSchema = new Schema(
 );
 
 const Market = mongoose.model('Market', marketSchema);
-export default Market;
+module.exports = Market;
