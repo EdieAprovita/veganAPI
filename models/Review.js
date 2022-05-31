@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = required('mongoose');
 const { Schema } = mongoose;
 
 const reviewSchema = new Schema(
@@ -30,4 +30,4 @@ const reviewSchema = new Schema(
 );
 
 const Review = mongoose.model('Review', reviewSchema);
-export default Review;
+module.exports = Review;

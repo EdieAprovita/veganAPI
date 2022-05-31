@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = required('mongoose');
 const { Schema } = mongoose;
-import Review from './Review.js';
+const Review = required('./Review.js');
 
 const professionSchema = new Schema(
 	{
@@ -22,7 +22,7 @@ const professionSchema = new Schema(
 		contact: [
 			{
 				phone: {
-					type: Number, 
+					type: Number,
 					require: [true, 'Write a phone number'],
 					unique: [true, 'This phone number is already in use'],
 				},
@@ -67,4 +67,4 @@ const professionSchema = new Schema(
 );
 
 const Profession = mongoose.model('Profession', professionSchema);
-export default Profession;
+module.exports = Profession;

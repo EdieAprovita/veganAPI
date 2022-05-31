@@ -1,6 +1,6 @@
-import mongoose from 'mongoose';
+const mongoose = required('mongoose');
 const { Schema } = mongoose;
-import Review from './Review.js';
+const Review = required('./Review.js');
 
 const restaurantSchema = new Schema(
 	{
@@ -81,4 +81,4 @@ const restaurantSchema = new Schema(
 );
 
 const Restaurant = mongoose.model('Restaurant', restaurantSchema);
-export default Restaurant;
+module.exports = Restaurant;
